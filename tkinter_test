@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Feb 18 22:39:33 2019
+
+@author: kangjm
+"""
+import tkinter as tk
+from tkinter import filedialog
+
+root=tk.Tk()
+root.title("Dog Sound")
+root.geometry("640x400+100+100")
+root.resizable(1,1)
+img=tk.PhotoImage(file='./128px-Barking_Dog.png')
+label=tk.Label(root, image=img)
+label.grid(row=0,column=2)
+
+b_f_o=tk.Button(root,text='Dog Sound File open')
+b_f_o.grid(row=1,column=2)
+
+lbl1=tk.Label(root,text='Sound')
+lbl1.grid(row=4,column=2)
+
+b_play=tk.Button(root,text='P l a y')
+b_play.grid(row=3,column=3)
+   
+b_stop=tk.Button(root,text='S t o p')
+b_stop.grid(row=5,column=3)
+
+#lbl2=tk.Label(root,text='Sound')
+#lbl2.grid(row=50,column=1)
+
+b_exec=tk.Button(root,text='What my doogy want?')
+b_exec.grid(row=6,column=3)
+        
+#숫자 및 결과 표시창.
+number_entry = tk.Entry(root, width=20)
+number_entry.grid(row=7, columnspan=6)
+
+
+exit_btn=tk.Button(root,text='Exit')
+exit_btn.grid(row=8,column=0)
+
+root.mainloop()
